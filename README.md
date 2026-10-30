@@ -34,4 +34,30 @@ The model standardizes raw feature inputs and classifies instances into:
 
 ## 📊 Dataset
 
-The model is trained on the **Wisconsin Breast Cancer Diagnostic Dataset**
+The model is trained on the **Wisconsin Breast Cancer Diagnostic Dataset** (available via `sklearn.datasets.load_breast_cancer`), which contains **569 instances** and **30 numerical cytological features**:
+
+- **Mean, Standard Error, and "Worst" (Largest)** values computed for:
+  - Radius
+  - Texture
+  - Perimeter
+  - Area
+  - Smoothness
+  - Compactness
+  - Concavity
+  - Concave Points
+  - Symmetry
+  - Fractal Dimension
+
+---
+
+## 🏗️ Project Architecture
+
+```text
+breast-cancer-prediction/
+│
+├── app.py                             # Streamlit web application & inference logic
+├── requirements.txt                   # Deployment dependencies
+├── breast_cancer_model.keras          # Saved trained neural network weights & architecture
+├── scaler.pkl                         # Fitted StandardScaler instance
+├── BreastCancer classification.ipynb  # End-to-end training and analysis notebook
+└── README.md                          # Project documentation
